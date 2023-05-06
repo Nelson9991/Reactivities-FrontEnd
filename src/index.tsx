@@ -1,15 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import reportWebVitals from './reportWebVitals';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentPreviews, useInitial } from './dev';
 import { store, StoreContext } from './app/stores/store';
-import { RouterProvider } from 'react-router-dom'
-import { router } from './app/router/Routes'
-import 'react-calendar/dist/Calendar.css'
+import { RouterProvider } from 'react-router-dom';
+import { router } from './app/router/Routes';
+import 'react-calendar/dist/Calendar.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <DevSupport ComponentPreviews={ComponentPreviews} useInitialHook={useInitial}>
     <StoreContext.Provider value={store}>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </StoreContext.Provider>
   </DevSupport>
 );
